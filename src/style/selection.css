@@ -1,0 +1,54 @@
+.selection-inner {
+  margin-top: 20vh;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.selection-inner>h1{
+    font-size: 4vw;
+    text-transform: uppercase;
+}
+.selection-button {
+  cursor: pointer;
+  pointer-events: all;
+  border-radius: 5px;
+  width: 8vw !important;
+  height: 3.5vw;
+  font-size: 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+.linktag{
+  text-decoration: none;
+}
+.register-button {
+  color: rgb(43, 43, 43);
+  background-color: rgb(159, 159, 159);
+}
+.register-button:hover {
+  background-color: #ffffff;
+}
+.login-button {
+  color: rgb(130, 130, 130);
+  border: 2px solid rgb(130, 130, 130);
+}
+.login-button:hover {
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+}
+.button-duv-5 {
+    margin-top: 6vw;
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.qr-main{
+  height: 10vw;
+  width: 10vw;
+}

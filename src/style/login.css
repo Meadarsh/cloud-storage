@@ -1,0 +1,137 @@
+.login-inner {
+  opacity: 0;
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    width: 30vw;
+    padding-top: 5vw;
+    background-color: rgb(55, 55, 55);
+    display: flex;
+    font-weight: 600;
+    flex-direction: column;
+    align-items: center;
+  }
+  .login-inner>h2 {
+      color: rgb(241, 241, 241);
+      font-size: 3vw;
+
+  }
+  .login-inner>h2 span {
+    font-size: 1.2vw;
+    color: rgb(167, 167, 167);
+  }
+  .mt{
+    margin-top: 3vw;
+  }
+  .main-login {
+    color: rgb(61, 61, 61);
+    position: relative;
+    pointer-events: none;
+    height: 100vh;
+    width: 100vw;
+    font-weight: 600;
+    overflow: hidden;
+    background-color: rgb(43, 43, 43);
+  }
+  .main-login > h1 {
+    position: absolute;
+    font-size: 25vw;
+    transform-origin: center;
+    bottom: -16vw;
+    font-weight: 600;
+  }
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vw;
+    color: white;
+  }
+  
+  
+  /************ Form *****************/
+  .form {
+      pointer-events: all;
+      --width-of-input: 300px;
+      --border-height: 1px;
+      font-weight: 500;
+      --border-before-color: rgba(221, 221, 221, 0.39);
+      --border-after-color: #ffffff;
+      --input-hovered-color: #31313174;
+      position: relative;
+      width: var(--width-of-input);
+     }
+     /* styling of Input */
+     .input {
+      color: #fff;
+      font-size: 0.9rem;
+      margin-top: 2vw;
+      background-color: transparent;
+      width: 100%;
+      box-sizing: border-box;
+      padding-inline: 0.5em;
+      padding-block: 0.7em;
+      border: none;
+      border-bottom: var(--border-height) solid var(--border-before-color);
+     }
+     .input-border {
+      position: absolute;
+      background: var(--border-after-color);
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      transition: 0.3s;
+     }
+     /* Hover on Input */
+     input:hover {
+      background: var(--input-hovered-color);
+     }
+     
+     input:focus {
+      outline: none;
+     }
+     /* here is code of animated border */
+     input:focus ~ .input-border {
+      width: 100%;
+     }
+.submit-button:hover{
+    border: 3px solid #ffffff;
+    color: #fff;
+}
+.submit-button{
+    pointer-events: all;
+    cursor: pointer;
+    height: 55px;
+    width: 16vw;
+    border-radius: 5px;
+    margin-top: 5vw;
+    background-color: rgba(65, 105, 225, 0);
+    border: 3px solid rgb(138, 138, 138) ;
+    display: flex;
+    font-size: 2vw;
+    align-items: center;
+    justify-content: center;
+    color: rgb(206, 206, 206);
+    transition: all .2s;
+}
+/*************** loading          ***************/
+
+
+.loader {
+  border: 4px solid rgba(163, 163, 163, 0.581);
+  border-left-color: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: spin89345 1s linear infinite;
+}
+
+@keyframes spin89345 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

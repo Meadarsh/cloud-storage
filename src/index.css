@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@200;300;400;500;600;700;800&family=M+PLUS+1+Code:wght@100;500&family=M+PLUS+Code+Latin:wght@100;200;300;400;500;600;700&display=swap');
+body{
+    font-family: 'Dosis', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
+    font-family: 'M PLUS 1 Code', monospace;
+    font-family: 'M PLUS Code Latin', monospace;
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+::selection{
+    background-color: transparent;
+}

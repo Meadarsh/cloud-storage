@@ -1,0 +1,66 @@
+.main {
+  position: relative;
+  pointer-events: none;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: rgb(40, 40, 40);
+  overflow: hidden;
+}
+.docssign {
+  position: absolute;
+  font-size: 25vw;
+  transform-origin: center;
+  bottom: -17vw;
+  font-weight:600;
+  color: rgb(72, 72, 72);
+  
+}
+.render-div{
+  width: 75vw;
+  height: 100hv;
+  padding-top:30px;
+  pointer-events: all;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* upload button ********/
+.bottom-box {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid gray ;
+}
+.upload-button {
+  position: relative;
+  height: 50px;
+  width: 80%;
+  font-size: 20px;
+  border-radius: 30px;
+  background-color: royalblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+.upload-button input{
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.upload-button *{
+  pointer-events: all;
+}
+.upload-button:hover {
+  background-color: rgb(42, 88, 223);
+}
+/* Login Page **********/
