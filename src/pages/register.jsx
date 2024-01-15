@@ -22,7 +22,7 @@ const RegisterPage = () => {
   async function SubmitFun() {
     setLoading(true);
     try {
-      const response = await fetch("https://driveapi-tz5l.vercel.app/api/v1/users/register", {
+      const response = await fetch("https://driveapi-seven.vercel.app/api/v1/users/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
