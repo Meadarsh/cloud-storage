@@ -13,7 +13,7 @@ const UploadButton = () => {
     formData.append('files', files);
     try {
       
-      const uploadResponse = await fetch("https://driveapi-tz5l.vercel.app/api/v1/users/upload", {
+      const uploadResponse = await fetch("https://driveapi-seven.vercel.app/api/v1/users/upload", {
         method: "POST",
         body:formData
       });
