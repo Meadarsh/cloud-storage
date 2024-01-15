@@ -44,7 +44,7 @@ const LoginPage = () => {
       const data= await response.json()
       console.log(data)
       setLoading(false)
-      window.location.reload();
+     
     }else {
       const data= await response.json()
       notify(data.message)
