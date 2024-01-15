@@ -7,7 +7,7 @@ const Qrcode = ({data, id}) => {
     setDeleting(true);
     toast.loading("Deleting")
         try {
-            const uploadResponse = await fetch(`https://driveapi-tz5l.vercel.app/api/v1/users/delete/${id}`,{
+            const uploadResponse = await fetch(`https://driveapi-seven.vercel.app/api/v1/users/delete/${id}`,{
                 method: "DELETE",
             }) 
             if(uploadResponse.ok){
