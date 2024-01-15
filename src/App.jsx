@@ -10,7 +10,7 @@ function App() {
  const[verified,setVerified]=useState(true)
     async function Verification() {
     try {
-      const auth = await fetch("https://driveapi-tz5l.vercel.app/api/v1/users/", {
+      const auth = await fetch("https://driveapi-seven.vercel.app/api/v1/users/", {
         method: 'post',
         headers: {
           Accept: "application/json",
