@@ -29,9 +29,10 @@ const LoginPage = () => {
     if (!email || !password){ setLoading(false); return notify("Enter credentials");}
     try { const response = await fetch("https://driveapi-seven.vercel.app/api/v1/users/login", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
       body: JSON.stringify({
         email,
         password,
