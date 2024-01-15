@@ -27,7 +27,7 @@ const LoginPage = () => {
   const Login = async () => {
     setLoading(true);
     if (!email || !password){ setLoading(false); return notify("Enter credentials");}
-    try { const response = await fetch("https://driveapi-tz5l.vercel.app/api/v1/users/login", {
+    try { const response = await fetch("https://driveapi-seven.vercel.app/api/v1/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
