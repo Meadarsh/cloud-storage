@@ -4,6 +4,7 @@ import { ToastContainer,toast } from 'react-toastify'
 const Qrcode = ({data, id}) => {
     const[deleting,setDeleting]=useState(false)
    async function DeleteFile(){
+       console.log(id)
     setDeleting(true);
     toast.loading("Deleting")
         try {
