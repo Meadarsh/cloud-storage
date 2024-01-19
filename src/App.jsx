@@ -21,7 +21,7 @@ function App() {
         credentials: "include"
       });
      console.log(auth)
-      if(!auth){
+      if(auth){
         const data = await auth.json();
        console.log("hhk",data)
        if(!data.auth){ setColor(3)
