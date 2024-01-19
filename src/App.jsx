@@ -22,21 +22,25 @@ function App() {
       });
       if(!auth){
         const data = await auth.json();
-        setColor(3)
+       if(!data.auth){ setColor(3)
         setTimeout(()=>
         setVerified(3),500);
-          return data
-      }
-      if(auth){
+          return null}
+      
+      if(true){
       const data = await auth.json();
       setColor(2)
        setTimeout(()=>
       setVerified(2),500);
         return data
     }
-  
+      }
    
-    } catch (error) {
+    }
+      catch (error) {
+      setColor(2)
+       setTimeout(()=>
+      setVerified(2),500);
      return console.log("Fetch error:", error);
     }
   }
