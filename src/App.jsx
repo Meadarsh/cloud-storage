@@ -7,9 +7,9 @@ import Selection from './pages/selection'
 import RegisterPage from './pages/register'
 import { BrowserRouter,Outlet,Route, Routes } from 'react-router-dom'
 import RedirectPage from './pages/RedirectPade'
-import { useLocation } from 'react-router-dom';
+
 function App() {
- const location = useLocation();
+
  const[verified,setVerified]=useState(1)
  const[color,setColor]=useState(1)
  const[data,setData]=useState([])
