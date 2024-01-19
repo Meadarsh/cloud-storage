@@ -20,6 +20,7 @@ function App() {
         },
         credentials: "include"
       });
+     console.log(auth)
       if(!auth){
         const data = await auth.json();
        console.log("hhk",data)
