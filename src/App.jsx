@@ -1,7 +1,7 @@
 import Home from './home'
 import './style/login.css'
 import './App.css'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import LoginPage from './pages/LoginPage'
 import Selection from './pages/selection'
 import RegisterPage from './pages/register'
@@ -10,8 +10,12 @@ import RedirectPage from './pages/RedirectPade'
 function App() {
  const[verified,setVerified]=useState(1)
  const[color,setColor]=useState(1)
-    async function Verification() {
-    try {
+ const[data,setData]=useState([])
+ useEffect(()=>{
+   async function Verification() {
+ try {
+  setVerified(1)
+  setColor(1)
       const auth = await fetch("https://driveapi-seven.vercel.app/api/v1/users/", {
         method: 'post',
         headers: {
@@ -20,7 +24,6 @@ function App() {
         },
         credentials: "include"
       });
-     console.log(auth)
       if(auth){
         const data = await auth.json();
        console.log("hhk",data)
@@ -46,8 +49,16 @@ function App() {
      return console.log("Fetch error:", error);
     }
   }
-  const data= Verification()
+  const dataa= Verification()
   console.log(data)
+
+setData(dataa)
+
+
+  
+ },[])  
+
+   
   return (
     <>
 <BrowserRouter>
