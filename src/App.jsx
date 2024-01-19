@@ -58,7 +58,7 @@ setData(dataa)
 
 
   
- },[location.pathname])  
+ },[])  
 
    
   return (
