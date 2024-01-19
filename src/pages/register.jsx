@@ -3,7 +3,10 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from 'react-router-dom';
+
 const RegisterPage = () => {
+   const navigate = useNavigate();
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -37,7 +40,7 @@ const RegisterPage = () => {
         const data = await response.json();
         console.log(data);
         setLoading(false);
-        window.location.href = '/';
+         navigate('/');
       } else {
         const data = await response.json();
         notify(data.message);
