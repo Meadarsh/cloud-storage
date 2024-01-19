@@ -41,7 +41,7 @@ function App() {
     }
   }
   const data= Verification()
-  
+  console.log(data)
   return (
     <>
 <BrowserRouter>
