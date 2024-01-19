@@ -22,7 +22,7 @@ function App() {
       });
       if(!auth){
         const data = await auth.json();
-       console.log(data)
+       console.log("hhk",data)
        if(!data.auth){ setColor(3)
         setTimeout(()=>
         setVerified(3),500);
