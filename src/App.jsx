@@ -6,8 +6,10 @@ import LoginPage from './pages/LoginPage'
 import Selection from './pages/selection'
 import RegisterPage from './pages/register'
 import { BrowserRouter,Outlet,Route, Routes } from 'react-router-dom'
+import RedirectPage from './pages/RedirectPade'
 function App() {
- const[verified,setVerified]=useState(true)
+ const[verified,setVerified]=useState(1)
+ const[color,setColor]=useState(1)
     async function Verification() {
     try {
       const auth = await fetch("https://driveapi-seven.vercel.app/api/v1/users/", {
@@ -18,13 +20,22 @@ function App() {
         },
         credentials: "include"
       });
+      if(!auth){
+        const data = await auth.json();
+        setColor(3)
+        setTimeout(()=>
+        setVerified(3),500);
+          return data
+      }
       if(auth){
       const data = await auth.json();
-      setVerified(data.auth)
+      setColor(2)
+       setTimeout(()=>
+      setVerified(2),500);
         return data
-      
     }
-
+  
+   
     } catch (error) {
      return console.log("Fetch error:", error);
     }
@@ -36,9 +47,9 @@ function App() {
 <BrowserRouter>
 <Outlet/>
 <Routes>
-<Route path='/' element={verified?<Home data={data}/>:<Selection/>}/>
-<Route path="login" element={verified?null:<LoginPage />}></Route>
-<Route path="/registration" element={verified?null:<RegisterPage />}></Route>
+<Route path='/' element={verified==2?<Home data={data}/>: verified==3?<Selection/>:<LoadingPage color={color} />}/>
+<Route path="/login" element={verified==3?<LoginPage />:<RedirectPage/>}></Route>
+<Route path="/registration" element={verified==3?<RegisterPage />:<RedirectPage/>}></Route>
 </Routes>
 
 </BrowserRouter>
@@ -46,5 +57,13 @@ function App() {
     </>
   )
 }
-
+const LoadingPage = ({color}) => {
+  return (
+    <div className='main-loading'>
+      <div className='flex items-end'><h1 className='loadingh1'>Stack</h1>
+      <div className={`dott ${color==2?'greendot':color==3?'reddot':'whitedot'}`}></div>
+      </div>
+    </div>
+  )
+}
 export default App
