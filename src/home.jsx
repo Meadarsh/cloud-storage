@@ -6,12 +6,7 @@ const Home = ({data}) => {
   const [storage,setStorage]=useState()
   
 useEffect(() => {
-    // Assuming dataPromise is a Promise that fetches the data
-    data.then((resolvedData) => {
-      // Update the state with the resolved data
-      setFiles(resolvedData.files);
-      setStorage(resolvedData.storage)
-    });
+  setFiles(data.files)
   }, [data]);
   console.log(files)
   return (
