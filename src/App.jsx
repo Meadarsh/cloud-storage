@@ -54,7 +54,7 @@ const currentUrl = window.location.href;
   const dataa= Verification()
   console.log(data)
 
-setData(dataa)
+if(dataa){ setData(dataa)}
 
 
   
