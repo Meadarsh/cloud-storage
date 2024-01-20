@@ -29,19 +29,17 @@ const currentUrl = window.location.href;
       if(auth){
         const data = await auth.json();
        console.log("hhk",data)
+       // false
        if(!data.auth){ setColor(3)
         setTimeout(()=>
         setVerified(3),500);
           return null}
-      
-      if(true){
-      const data = await auth.json();
+       // true
       setColor(2)
         setData(data)
        setTimeout(()=>
       setVerified(2),500);
         return ;
-    }
       }
    
     }
