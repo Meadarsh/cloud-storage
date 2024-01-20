@@ -13,7 +13,9 @@ const currentUrl = window.location.href;
  const[verified,setVerified]=useState(1)
  const[color,setColor]=useState(1)
  const[data,setData]=useState([])
- useEffect(()=>{
+
+
+
    async function Verification() {
  try {
   setVerified(1)
@@ -50,13 +52,11 @@ const currentUrl = window.location.href;
      return console.log("Fetch error:", error);
     }
   }
+
+ 
+ useEffect(()=>{
   Verification()
   console.log('useState',data)
-
-
-
-
-  
  },[currentUrl])  
 
    
