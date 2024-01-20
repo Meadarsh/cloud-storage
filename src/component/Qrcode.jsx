@@ -10,6 +10,7 @@ const Qrcode = ({data, id}) => {
         try {
             const uploadResponse = await fetch(`https://driveapi-seven.vercel.app/api/v1/users/delete/${id}`,{
                 method: "DELETE",
+                 credentials: 'include',
             }) 
             if(uploadResponse.ok){
                 window.location.reload();
