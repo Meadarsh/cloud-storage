@@ -37,9 +37,10 @@ const currentUrl = window.location.href;
       if(true){
       const data = await auth.json();
       setColor(2)
+        setData(data)
        setTimeout(()=>
       setVerified(2),500);
-        return data
+        return ;
     }
       }
    
@@ -51,10 +52,10 @@ const currentUrl = window.location.href;
      return console.log("Fetch error:", error);
     }
   }
-  const dataa= Verification()
-  console.log(data)
+  Verification()
+  console.log('useState',data)
 
-if(dataa){ setData(dataa)}
+
 
 
   
