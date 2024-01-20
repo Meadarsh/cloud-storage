@@ -11,7 +11,7 @@ useEffect(() => {
   console.log(files)
   return (
     <div className='main'>
-      <div className="render-div">{files.map((e,index) => <Card key={index} data={e} />)}</div>
+      <div className="render-div">{files?.map((e,index) => <Card key={index} data={e} />)}</div>
       <Sidepannel data={storage} />
         <h1 className='docssign'>
             Stack
