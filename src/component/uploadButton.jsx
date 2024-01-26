@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FiUpload } from "react-icons/fi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-const UploadButton = () => {
+const UploadButton = ({Verification}) => {
   const [loadingToastId, setLoadingToastId] = useState(null);
   const handleFileChange = async (event) => {
   //do something else
@@ -24,8 +24,7 @@ const UploadButton = () => {
         let resp=await uploadResponse.json()
         setLoadingToastId(null)// Dismiss the loading toast
         toast.success(resp.message); // Create a new success toast
-       
-        window.location.reload();
+       Verification()
         return;
       } else {
         const errorResp = await uploadResponse.json();
