@@ -15,6 +15,10 @@ const UploadButton = () => {
       
       const uploadResponse = await fetch("https://driveapi-seven.vercel.app/api/v1/users/upload", {
         method: "POST",
+         headers: {
+    // Set content type if needed
+    'Content-Type': 'multipart/form-data',
+  },
         body:formData,
         credentials: 'include',
       });
