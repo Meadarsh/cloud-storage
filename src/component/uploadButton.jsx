@@ -15,7 +15,6 @@ const UploadButton = () => {
       
       const uploadResponse = await fetch("https://driveapi-seven.vercel.app/api/v1/users/upload", {
         method: "POST",
-  
         body:formData,
         credentials: 'include',
       });
@@ -23,6 +22,7 @@ const UploadButton = () => {
         let resp=await uploadResponse.json()
         setLoadingToastId(null)// Dismiss the loading toast
         toast.success(resp.message); // Create a new success toast
+        console.log(resp)
         window.location.reload();
         return;
       } else {
