@@ -18,11 +18,12 @@ const UploadButton = () => {
         body:formData,
         credentials: 'include',
       });
+       console.log(uploadResponse)
       if (uploadResponse.ok) {
         let resp=await uploadResponse.json()
         setLoadingToastId(null)// Dismiss the loading toast
         toast.success(resp.message); // Create a new success toast
-        console.log(resp)
+       
         window.location.reload();
         return;
       } else {
