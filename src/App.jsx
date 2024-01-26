@@ -65,7 +65,7 @@ const currentUrl = window.location.href;
 <BrowserRouter>
 <Outlet/>
 <Routes>
-<Route path='/' element={verified==2?<Home data={data}/>: verified==3?<Selection/>:<LoadingPage color={color} />}/>
+<Route path='/' element={verified==2?<Home Verification={Verification} data={data}/>: verified==3?<Selection/>:<LoadingPage color={color} />}/>
 <Route path="/login" element={verified==3?<LoginPage />:<RedirectPage/>}></Route>
 <Route path="/registration" element={verified==3?<RegisterPage />:<RedirectPage/>}></Route>
 </Routes>
