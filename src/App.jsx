@@ -18,8 +18,7 @@ const currentUrl = window.location.href;
 
    async function Verification() {
  try {
-  setVerified(1)
-  setColor(1)
+
       const auth = await fetch("https://driveapi-seven.vercel.app/api/v1/users/", {
         method: 'post',
         headers: {
@@ -55,6 +54,8 @@ const currentUrl = window.location.href;
 
  
  useEffect(()=>{
+    setVerified(1)
+  setColor(1)
   Verification()
   console.log('useState',data)
  },[currentUrl])  
