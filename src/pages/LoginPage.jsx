@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from 'react-router-dom';
 
-const LoginPage = () => {
+const LoginPage = ({Verification}) => {
    const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -49,6 +49,7 @@ const LoginPage = () => {
       const data= await response.json()
       console.log(data)
       setLoading(false)
+       Verification()
        navigate('/');
      
     }else {
