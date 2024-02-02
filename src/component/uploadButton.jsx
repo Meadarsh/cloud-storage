@@ -8,11 +8,11 @@ const UploadButton = ({Verification}) => {
   //do something else
     // Access the selected file from event.target.files
     const files = event.target.files[0];
-    if(files) setLoadingToastId(toast.loading("Uploading"));
     const formData = new FormData();
     formData.append('files', files);
     try {
-      
+          if(files) setLoadingToastId(toast.loading("Uploading"));
+
       const uploadResponse = await fetch("https://driveapi-seven.vercel.app/api/v1/users/upload", {
         method: "POST",
     
