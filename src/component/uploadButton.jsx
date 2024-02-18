@@ -7,7 +7,7 @@ const UploadButton = ({Verification}) => {
   const handleFileChange = async (event) => {
   //do something else
     // Access the selected file from event.target.files
-    const files = event.target.files[0];
+    let files = event.target.files[0];
     const formData = new FormData();
     formData.append('files', files);
     try {
@@ -19,12 +19,12 @@ const UploadButton = ({Verification}) => {
         body:formData,
         credentials: 'include',
       });
-       console.log(uploadResponse)
       if (uploadResponse.ok) {
         let resp=await uploadResponse.json()
         setLoadingToastId(null)// Dismiss the loading toast
         toast.success(resp.message); // Create a new success toast
-       Verification()
+        Verification()
+        files=null;
         return;
       } else {
         const errorResp = await uploadResponse.json();
