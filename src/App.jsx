@@ -19,7 +19,7 @@ const currentUrl = window.location.href;
    async function Verification() {
  try {
 
-      const auth = await fetch("https://driveapi.onrender.com/api/v1/users/", {
+      const auth = await fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/users/`, {
         method: 'post',
         headers: {
           Accept: "application/json",

@@ -25,7 +25,7 @@ const RegisterPage = () => {
   async function SubmitFun() {
     setLoading(true);
     try {
-      const response = await fetch("https://driveapi.onrender.com/api/v1/users/register", {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/users/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

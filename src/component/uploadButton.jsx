@@ -13,7 +13,7 @@ const UploadButton = ({Verification}) => {
     try {
           if(files) setLoadingToastId(toast.loading("Uploading"));
 
-      const uploadResponse = await fetch("https://driveapi.onrender.com/api/v1/users/upload", {
+      const uploadResponse = await fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/users/upload`, {
         method: "POST",
     
         body:formData,
