@@ -7,6 +7,7 @@ const UploadButton = ({Verification}) => {
   const handleFileChange = async (event) => {
   //do something else
     // Access the selected file from event.target.files
+    
     let files = event.target.files[0];
     const formData = new FormData();
     formData.append('files', files);

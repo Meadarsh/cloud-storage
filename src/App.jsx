@@ -27,7 +27,7 @@ const currentUrl = window.location.href;
         },
         credentials: "include"
       });
-      if(auth){
+      if(auth.ok){
         const data = await auth.json();
        console.log("hhk",data)
        // false
@@ -78,7 +78,7 @@ const currentUrl = window.location.href;
 }
 const LoadingPage = ({color}) => {
   return (
-    <div className='main-loading'>
+    <div className='main-loading '>
       <div className='flex items-end'><h1 className='loadingh1'>Stack</h1>
       <div className={`dott ${color==2?'greendot':color==3?'reddot':'whitedot'}`}></div>
       </div>
